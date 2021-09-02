@@ -27,3 +27,17 @@ class Array
         new_arr
     end
 end
+
+def my_transpose(array)
+    zip = []
+
+    (0...array.length).each do |i|
+        zipped = []
+        
+        array.each do |sub_arr|
+            zipped << sub_arr[i]
+        end
+        zip << zipped
+    end
+    zip
+end

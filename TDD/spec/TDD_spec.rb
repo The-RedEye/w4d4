@@ -32,7 +32,37 @@ require "rspec"
     end
   end
 
+  describe "my_transpose" do 
+    let(:arr){ my_transpose([
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8]
+    ])
+    }
+
+    it "takes in an array" do
+      expect{arr}.not_to raise_error
+    end
+
+    it "returns an array" do
+      expect(arr).to be_a(Array)
+    end
+
+    it "square to 2D array" do 
+      expect(arr.length).to eq(arr[0].length)
+    end
+
+    it "returns a transposed array" do
+      expect(arr).to eq( [
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8]
+      ] )
+      end
+  end
+
   
+
 
 
   
