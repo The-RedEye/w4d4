@@ -4,7 +4,6 @@ def my_uniq(arr)
 #sorting through
 #removing duplicates found
 
-#return array without duplicates
     uniq_arr = []
     arr.each do |ele|
         if uniq_arr.count(ele) < 1
