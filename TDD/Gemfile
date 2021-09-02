@@ -1,0 +1,7 @@
+
+source "https://rubygems.org"
+
+#git_source(:github) {|w4d4| } 
+gem "rspec"
+gem "pry"
+gem "byebug"
