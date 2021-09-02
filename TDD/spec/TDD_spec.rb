@@ -61,9 +61,52 @@ require "rspec"
       end
   end
 
-  
+  describe "#my_stock_picker" do
+
+    let(:days){my_stock_picker([10,25,100,4,50])}
+    let(:arr){[10,25,100,4,50]}
+
+    it "takes in an array" do 
+      expect{days}.not_to raise_error
+    end
+
+    it "returns an array" do
+      expect(days).to be_a(Array)
+    end
+
+    it "returns an array of length 2" do
+      expect(days.length).to eq(2)
+    end
+
+    it "to be profitable" do 
+      expect(arr[days.first]).to be <(arr[days.last]) 
+    end
+  end
+
+  #Declare another let
 
 
+  describe "Tower_of_Hanoi" do 
+
+    let(:towers){Towers_of_Hanoi.new}
+
+    it "Has first tower empty" do
+      expect(towers.tower_1).to eq([])
+    end
+
+    it "Has second tower empty" do 
+      expect(towers.tower_2).to eq([])
+    end
+
+    it "Has three tower has all the discs" do 
+      expect(towers.tower_3.length).to eq(towers.num_discs)
+    end
+
+    it "The game starts more than 0 disc" do
+      expect(towers.num_discs).to be >0
+    end
+
+  end
 
   
 
